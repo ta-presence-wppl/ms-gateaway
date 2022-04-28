@@ -55,6 +55,22 @@ const ROUTES = [
             },
         }
     },
+    {
+        url: '/absent_service',
+        auth: false,
+        creditCheck: false,
+        // rateLimit: {
+        //     windowMs: 1 * 60 * 100,
+        //     max: 5
+        // },
+        proxy: {
+            target: "http://localhost:1102",
+            changeOrigin: true,
+            pathRewrite: {
+                [`^/absent_service`]: '',
+            },
+        }
+    },
 ]
 
 exports.ROUTES = ROUTES;
