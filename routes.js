@@ -28,6 +28,18 @@ const ROUTES = [
         }
     },
     {
+        url: '/storage',
+        auth: false,
+        creditCheck: false,
+        proxy: {
+            target: "http://localhost/AhmadRivaiy",
+            changeOrigin: true,
+            pathRewrite: {
+                [`^/storage`]: '',
+            },
+        }
+    },
+    {
         url: '/premium',
         auth: true,
         creditCheck: true,
