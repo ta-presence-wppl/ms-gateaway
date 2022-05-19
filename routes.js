@@ -32,7 +32,7 @@ const ROUTES = [
         auth: false,
         creditCheck: false,
         proxy: {
-            target: "http://localhost/AhmadRivaiy",
+            target: "http://103.155.104.11/AhmadRivaiy/ta-presence-api",
             changeOrigin: true,
             pathRewrite: {
                 [`^/storage`]: '',
