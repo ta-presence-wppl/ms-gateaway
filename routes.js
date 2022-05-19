@@ -43,10 +43,6 @@ const ROUTES = [
         url: '/auth_service',
         auth: false,
         creditCheck: false,
-        // rateLimit: {
-        //     windowMs: 1 * 60 * 100,
-        //     max: 5
-        // },
         proxy: {
             target: "http://localhost:1101",
             changeOrigin: true,
@@ -59,15 +55,35 @@ const ROUTES = [
         url: '/absent_service',
         auth: false,
         creditCheck: false,
-        // rateLimit: {
-        //     windowMs: 1 * 60 * 100,
-        //     max: 5
-        // },
         proxy: {
             target: "http://localhost:1102",
             changeOrigin: true,
             pathRewrite: {
                 [`^/absent_service`]: '',
+            },
+        }
+    },
+    {
+        url: '/izin_service',
+        auth: false,
+        creditCheck: false,
+        proxy: {
+            target: "http://localhost:1103",
+            changeOrigin: true,
+            pathRewrite: {
+                [`^/izin_service`]: '',
+            },
+        }
+    },
+    {
+        url: '/atasan_service',
+        auth: false,
+        creditCheck: false,
+        proxy: {
+            target: "http://localhost:1201",
+            changeOrigin: true,
+            pathRewrite: {
+                [`^/atasan_service`]: '',
             },
         }
     },

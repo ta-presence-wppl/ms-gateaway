@@ -11,6 +11,11 @@ const {setupProxies} = require("./proxy");
 const app = express()
 const port = process.env.PORT;
 
+app.get('/', (req, res, next) => {
+    res.json({
+        message: "SERVER Gateaway"
+    })
+});
 
 setupLogging(app);
 setupRateLimit(app, ROUTES);
